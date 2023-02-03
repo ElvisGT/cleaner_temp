@@ -1,38 +1,11 @@
-import fs from 'fs'
-import path from 'path'
-
-const clearTemps = (paths: string[]) => {
-
-    paths.forEach(item => {
-        fs.readdir(item, (err, files) => {
-            if (!err) {
-                files.forEach(subItem => {
-                    const clearPath = path.join(item, '/', subItem)
-                    try {
-                        if (subItem.split('.').length > 1) {
-                            fs.unlinkSync(clearPath)
-                        } else {
-                            fs.rmSync(clearPath, {
-                                recursive: true,
-                                force: true
-
-                            })
+import { clearTemps } from "./clearTemps"
 
 
-                        }
-                    } catch (err) {
-                        console.log('Operacion no permitida')
-
-                    }
-                })
-            }
-        })
-    })
-
-}
 
 const main = () => {
-    const pathFolders = ['C:/Windows/Temp']
+    const pathFolders = ['C:/Windows/Temp', 
+                        'C:/Users/Elvis-PC/AppData/Local/Temp',
+                        'C:/Windows/Prefetch']
     clearTemps(pathFolders)
 
 }
