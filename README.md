@@ -7,10 +7,10 @@ Es una aplicación cuya funcionalidad es borrar los archivos basura que se van g
 ## Como usar:
 
 1. Clonar el repositorio:
-   `git clone `
+   `git clone https://github.com/ElvisGT/cleaner_temp.git`
 
 2. Entrar en la carpeta
-    `cd `
+    `cd cleaner_temp`
 
 3. Instalar las dependencias:
    `yarn install`   
