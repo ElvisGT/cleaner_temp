@@ -1,10 +1,14 @@
 {
   "name": "cleaner_temp",
   "version": "1.0.0",
-  "description": "App for clean your temp files",
+  "description": "App para borrar tus archivos temporales",
   "main": "index.js",
   "author": "ElvisGT",
   "license": "MIT",
+  "scripts":{
+    "build":"tsc",
+    "start":"yarn run build && node dist/"
+  },
   "devDependencies": {
     "@types/node": "^18.11.18"
   }

@@ -18,8 +18,6 @@ export const clearTemps = (paths: string[]) => {
                                 force: true
 
                             })
-
-
                         }
                     })
                 } catch (err) {
